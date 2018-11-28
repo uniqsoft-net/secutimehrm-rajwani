@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="undecorated" type="boolean" value="true"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,88,0,0,2,-23"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="0"/>
+    <SyntheticProperty name="generateSize" type="boolean" value="true"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanel1" alignment="0" pref="745" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanel1" min="-2" pref="600" max="-2" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="false"/>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="1" green="7e" red="fc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="1" green="7e" red="fc" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Software License Agreement"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="260" y="20" width="-1" height="26"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="scrol">
+          <Events>
+            <EventHandler event="mouseDragged" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="scrolMouseDragged"/>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="scrolFocusLost"/>
+            <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="scrolMouseReleased"/>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="scrolKeyPressed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="20" y="70" width="700" height="480"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="jTextArea1">
+              <Properties>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="12" style="0"/>
+                </Property>
+                <Property name="lineWrap" type="boolean" value="true"/>
+                <Property name="rows" type="int" value="5"/>
+                <Property name="text" type="java.lang.String" value="&#xa;SecuTime HRM (SOFTWARE) - a time attendance and payroll management software developed by M/s. Unique Technologies. (LICENSOR) - is offered to the purchaser (CUSTOMER) on the following terms and conditions, which the purchaser shall be deemed to have accepted in full upon opening and installing the SOFTWARE.&#xa;&#xa;1. The LICENSOR is the owner of copyright and all other intellectual property rights in the SOFTWARE.&#xa;&#xa;2. The LICENSOR grants to the CUSTOMER, a non-exclusive license to use the SOFTWARE, upon the terms and conditions contained hereinafter.&#xa;&#xa;3. The CUSTOMER, by opening and installing this package, is deemed to have read, understood and agreed to be bound by the terms of this Agreement.  It is also agreed that this agreement is the complete and exclusive statement of agreement between the CUSTOMER and the LICENSOR.&#xa;&#xa;4. The CUSTOMER shall not decompile, disassemble or otherwise modify the SOFTWARE, except as provided for by this license.&#xa;&#xa;5. The CUSTOMER is solely responsible for determining the suitability of the SOFTWARE for the purpose it is intended to be used, before the purchase of the SOFTWARE.  Once the CUSTOMER purchases the SOFTWARE, the LICENSOR will not accept return of SOFTWARE under any circumstances, whatsoever, and the payment once made shall be non-refundable.&#xa;&#xa;6. The LICENSOR does not extend and expressly disclaims any warranty, whatsoever, as to the suitability, applicability, fitness, merchantability or otherwise of the SOFTWARE and related items.&#xa;&#xa;7. The CUSTOMER shall take all reasonable precautions and measures to protect the SOFTWARE and related items from unauthorized use, access, copying, modifications, reproduction, distribution or publication.&#xa;&#xa;8. The price of the SOFTWARE is the license fee for use of the SOFTWARE only.  All services like Installation, Training, Support etc. are chargeable extra.&#xa;&#xa;9. Upgrades, enhancements, additions and improved versions of the SOFTWARE shall be available to the CUSTOMER upon payment of additional license fee / price, as per the policy of the LICENSOR, as may be prevalent from time to time.&#xa;&#xa;10. After a new version is released, all further development / debugging will be carried out on the new version only, which may be subject to acceptance of further terms and conditions between the parties.&#xa;&#xa;11. The LICENSOR does not guarantee the compatibility of the SOFTWARE with future Operating Systems or Technologies.&#xa;&#xa;12. The LICENSOR shall not take any responsibility for any kind of corruption of data at the CUSTOMER site due to media failure / power failure / hardware problem / virus infection or any other reason.  At most, the LICENSOR can try to recover the data either fully or partially and the same shall be chargeable.&#xa;&#xa;13. It is expressly agreed by the CUSTOMER that neither the manufacturer nor the supplier of the SOFTWARE shall be liable for any loss or damage, whether direct, indirect, special, consequential and / or incidental, arising from the use or application of the SOFTWARE and related items.&#xa;&#xa;14. The Statutory Reports provided in the SOFTWARE are intended to provide the information / data to the CUSTOMER. The LICENSOR does not guarantee, promise or claim accuracy, completeness or adequacy of the information provided and makes no claim that the Statutory Reports provided in the SOFTWARE will be accepted by the tax authorities as it is.  The LICENSOR shall not be responsible for any error / omission or delay in fulfilling of statutory obligations by the CUSTOMER.  In case there is any change in statutory requirement, the LICENSOR shall try to incorporate the same in the forthcoming releases of the SOFTWARE, but, shall be under no obligation to do so.&#xa;&#xa;15. The parties hereby agree that the courts at Karachi alone shall have the jurisdiction to entertain any proceedings in respect of anything arising under this agreement.&#xa;"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="60" y="130" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextPane" name="jTextPane1">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="ok">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/ok-icon.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="OK"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="okActionPerformed"/>
+          </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="650" y="560" width="70" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

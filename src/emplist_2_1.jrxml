@@ -1,0 +1,1465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ac5b92bb-abd8-4241-8e67-589e6596ec28">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{31}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000" pattern=""/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{31}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{31}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{31}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_1">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{1}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{1}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{1}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{1}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_2">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{2}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF3300"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{2}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{2}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{2}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_3">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{3}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{3}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF3300"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{3}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{3}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{3}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_4">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{4}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF3300"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{4}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{4}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{4}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{4}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_5">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{5}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF3300"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{5}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{5}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{5}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{5}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_6">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{6}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{6}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{6}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{6}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{6}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_7">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{7}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0033"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{7}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0033"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{7}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{7}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{7}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_8">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{8}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0033"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{8}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0033"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{8}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{8}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{8}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_9">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{9}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0033"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{9}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0033"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{9}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{9}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{9}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_10">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{10}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{10}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0033"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{10}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{10}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{10}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_11">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{11}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0033"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{11}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0033"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{11}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{11}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{11}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_12">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{12}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0033"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{12}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{12}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{12}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{12}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_13">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{13}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{13}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{13}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{13}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{13}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_14">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{14}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{14}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{14}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{14}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_15">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{15}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{15}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{15}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{15}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{15}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_16">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{16}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{16}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{16}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{16}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{16}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_17">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{17}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{17}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{17}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{17}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{17}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_18">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{18}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{18}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{18}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{18}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{18}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_19">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{19}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{19}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{19}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{19}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{19}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_20">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{20}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{20}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{20}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{20}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{20}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_21">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{21}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{21}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{21}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{21}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{21}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_22">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{22}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{22}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{22}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{22}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{22}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_23">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{23}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{23}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{23}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{23}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{23}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_24">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{24}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{24}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{24}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{24}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{24}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_25">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{25}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0033"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{25}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{25}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{25}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{25}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_26">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{26}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{26}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{26}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{26}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{26}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_27">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{27}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{27}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{27}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{27}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{27}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_28">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{28}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{28}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{28}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{28}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{28}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_29">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{29}.equals(null)]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{29}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{29}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{29}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{29}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2_29_1">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{30}.equals(null)]]></conditionExpression>
+			<style mode="Transparent" forecolor="#FF0000" backcolor="#FFFFFF" fill="Solid">
+				<box>
+					<pen lineColor="#FF0000"/>
+					<topPen lineColor="#FF0000"/>
+					<leftPen lineColor="#FF0000"/>
+					<bottomPen lineColor="#FF0000"/>
+					<rightPen lineColor="#FF0000"/>
+				</box>
+			</style>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{30}.equals("L")]]></conditionExpression>
+			<style forecolor="#FF3333" backcolor="#FFFFFF"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{30}.equals("LE")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{30}.equals("LP")
+]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{30}.equals("LH")]]></conditionExpression>
+			<style forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[select * from statistic_report]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="1" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="2" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="3" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="4" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="5" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="6" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="7" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="8" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="9" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="10" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="11" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="12" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="13" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="14" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="15" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="16" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="17" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="18" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="19" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="20" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="21" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="22" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="23" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="24" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="25" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="26" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="27" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="28" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="29" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="30" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="31" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="variable1" class="java.util.Date" calculation="System"/>
+	<title>
+		<band height="37">
+			<line>
+				<reportElement x="132" y="19" width="1" height="18" uuid="d6ad2c80-049d-4618-9cfa-92617e9125e3"/>
+			</line>
+			<line>
+				<reportElement x="147" y="19" width="1" height="18" uuid="e1e426b7-c4e1-4ac9-bb7d-0c08b6e4f40f"/>
+			</line>
+			<line>
+				<reportElement x="162" y="19" width="1" height="18" uuid="9c4f2886-b140-4682-a850-38a3aa0df28d"/>
+			</line>
+			<line>
+				<reportElement x="177" y="19" width="1" height="18" uuid="c3e6dcaf-b989-4326-a040-115d849977c4"/>
+			</line>
+			<line>
+				<reportElement x="192" y="19" width="1" height="18" uuid="f456d9bc-173b-4e86-9d8c-2d3382f7483e"/>
+			</line>
+			<line>
+				<reportElement x="207" y="19" width="1" height="18" uuid="64f91aa6-3c64-4e55-9457-3162956c6b25"/>
+			</line>
+			<line>
+				<reportElement x="222" y="19" width="1" height="18" uuid="5c06f5fd-f1cd-44c1-a7bd-eafdf6d8e3d0"/>
+			</line>
+			<line>
+				<reportElement x="282" y="19" width="1" height="18" uuid="be988169-38fb-47bd-9e2f-7edfcb8d1dbb"/>
+			</line>
+			<line>
+				<reportElement x="327" y="19" width="1" height="18" uuid="1c0e9c72-a719-457b-9cc0-658fe156393d"/>
+			</line>
+			<line>
+				<reportElement x="237" y="19" width="1" height="18" uuid="430b7eef-c807-404d-82d5-bf1b201f8ae2"/>
+			</line>
+			<line>
+				<reportElement x="297" y="19" width="1" height="18" uuid="c8ba7494-cba6-415a-9f82-7c3fb72b340e"/>
+			</line>
+			<line>
+				<reportElement x="312" y="19" width="1" height="18" uuid="a4656df3-ed90-45fe-abb8-f89fc70956a8"/>
+			</line>
+			<line>
+				<reportElement x="252" y="19" width="1" height="18" uuid="afa9c7e5-37ad-41f4-ad41-f399ae94bdd5"/>
+			</line>
+			<line>
+				<reportElement x="267" y="19" width="1" height="18" uuid="f174b178-b2bd-4016-a494-d664ecc40070"/>
+			</line>
+			<line>
+				<reportElement x="387" y="19" width="1" height="18" uuid="ef9f4a0a-0e6c-4f9a-bc92-5ec233f726a8"/>
+			</line>
+			<line>
+				<reportElement x="463" y="19" width="1" height="18" uuid="38410b47-db33-4e3d-9dc1-68aea6b79cf3"/>
+			</line>
+			<line>
+				<reportElement x="478" y="19" width="1" height="18" uuid="79b6d0c7-03f1-441d-8252-c3d3e8c7c9f8"/>
+			</line>
+			<line>
+				<reportElement x="372" y="19" width="1" height="18" uuid="e1424578-53de-4557-9894-c19aae01717d"/>
+			</line>
+			<line>
+				<reportElement x="448" y="19" width="1" height="18" uuid="4d1b28e0-cee8-44b4-9e2b-f66bffebab39"/>
+			</line>
+			<line>
+				<reportElement x="357" y="19" width="1" height="18" uuid="f11e4660-3ac0-4914-b8d7-1769d01c9d1c"/>
+			</line>
+			<line>
+				<reportElement x="433" y="19" width="1" height="18" uuid="2426442d-80a7-45c5-967d-868bff958666"/>
+			</line>
+			<line>
+				<reportElement x="418" y="19" width="1" height="18" uuid="ab86cfa9-5e61-436e-bbcd-3d56e21b155e"/>
+			</line>
+			<line>
+				<reportElement x="403" y="19" width="1" height="18" uuid="58675c24-47f2-4bbd-b2c6-f0cb4a82a8b5"/>
+			</line>
+			<line>
+				<reportElement x="342" y="19" width="1" height="18" uuid="5f117184-159f-48fb-bcd8-96743575c378"/>
+			</line>
+			<line>
+				<reportElement x="493" y="19" width="1" height="18" uuid="1e6ffe1b-c4f4-42a9-84c1-f4e7960627b9"/>
+			</line>
+			<line>
+				<reportElement x="508" y="19" width="1" height="18" uuid="fbdb0a08-7c61-4c0d-82b6-1d62d2fd10f2"/>
+			</line>
+			<line>
+				<reportElement x="523" y="19" width="1" height="18" uuid="db145437-4204-4abf-b8d1-91ab62644732"/>
+			</line>
+			<line>
+				<reportElement x="554" y="19" width="1" height="18" uuid="92f7918b-53a4-4201-8c0e-98478fce496f"/>
+			</line>
+			<line>
+				<reportElement x="538" y="19" width="1" height="18" uuid="73b6daba-5f0d-442a-b827-5fa2d4d2f01f"/>
+			</line>
+			<staticText>
+				<reportElement x="138" y="19" width="9" height="18" uuid="463e1d8a-8afa-49d7-af37-e708863f628a"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="19" width="9" height="18" uuid="f449feb5-008d-4897-a3b7-327c48645fce"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="168" y="19" width="9" height="18" uuid="bae7b056-459b-4b45-b3cb-a4c13ee02e74"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="19" width="9" height="18" uuid="d9429418-1ce7-4e56-b03e-7d51654c538b"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="198" y="19" width="9" height="18" uuid="c6959c2d-8767-46ee-acb5-4864eeb7dec2"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="213" y="19" width="9" height="18" uuid="fc87cf52-a803-4237-b2ed-b7e765d299ed"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[9]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="19" width="13" height="18" uuid="b04f9dd8-56c0-4533-a50f-a552c2b54604"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[10]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="19" width="13" height="18" uuid="57390514-15ed-4fd1-a5f0-3686a033eb41"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[11]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="254" y="19" width="14" height="18" uuid="1d3f1edd-2886-42f5-9ad4-4e08a41cc08a"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[12]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="19" width="14" height="18" uuid="29a9ec3d-ceca-463f-96fa-b0bc1ae0fb43"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[13]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="19" width="13" height="18" uuid="235c27cc-3cbd-4cbf-b968-2d233af813dd"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[14]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="299" y="19" width="14" height="18" uuid="b4b9b932-1313-4e48-a307-24481ce1671d"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="314" y="19" width="13" height="18" uuid="8290fb10-e9a3-4bd7-a1a8-f853729475dd"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[16]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="19" width="13" height="18" uuid="7af2cab4-1e87-464a-b364-9fb61a2323a6"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[17]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="343" y="19" width="14" height="18" uuid="954e3dcf-295b-40f4-9e9b-ba7fec32dcfd"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[18]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="19" width="13" height="18" uuid="1c2c8759-145d-4498-a576-f4af4c4c7995"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[19]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="19" width="13" height="18" uuid="9025ca8a-69ca-4dbc-bf29-ef00baaa87a0"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[20]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="19" width="14" height="18" uuid="7247a8ab-e1f0-4283-ad60-32ae938e1c25"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[21]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="19" width="13" height="18" uuid="1ba5ac12-1fe1-402b-ba4a-ceefff36a3e1"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[22]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="19" width="13" height="18" uuid="ec9ab26e-cbae-4aa6-a833-29610bd95a29"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[23]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="434" y="19" width="14" height="18" uuid="67d02d81-3c23-4752-8b03-e83218476b58"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[24]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="19" width="13" height="18" uuid="16d81d3a-3cb3-48b3-b50c-60dee4e5cb55"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[25]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="465" y="19" width="13" height="18" uuid="ff861fdd-b744-49e8-a73e-80166415fb7b"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[26]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="19" width="13" height="18" uuid="26629a68-df35-49c1-8f19-22cdade6515c"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[27]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="495" y="19" width="13" height="18" uuid="aa74f738-d142-4934-9b9b-ae867328a59e"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[28]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="509" y="19" width="14" height="18" uuid="6f2cfb28-2b27-4591-94ac-7335f7c2792c"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[29]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="525" y="19" width="14" height="18" uuid="366c8a6d-22fb-4a75-83f5-8035968a823a"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[30]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="540" y="19" width="13" height="18" uuid="9b0feeb7-9dd2-4e7b-96eb-a32f97ac2b41"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[31]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="108" y="19" width="9" height="18" uuid="969dd344-204b-4c77-9d16-63d0ac29d048"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<line>
+				<reportElement x="102" y="19" width="1" height="18" uuid="e9d26155-bbb1-41ee-83fa-9022fdbd5733"/>
+			</line>
+			<line>
+				<reportElement x="87" y="19" width="1" height="18" uuid="bbd55283-176c-45b1-84ac-05281e7f9f58"/>
+			</line>
+			<line>
+				<reportElement x="117" y="19" width="1" height="18" uuid="8b693624-e61e-4256-aedc-ba7f82cfcfcc"/>
+			</line>
+			<staticText>
+				<reportElement x="93" y="19" width="9" height="18" uuid="17a3bc97-6150-4277-beb7-12490e837385"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="123" y="19" width="9" height="18" uuid="527de0da-9ccc-46fa-96d5-310c2328735f"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<line>
+				<reportElement x="3" y="19" width="552" height="1" uuid="325b2828-b3ab-4f19-a108-bdd0ae2c110b"/>
+			</line>
+			<staticText>
+				<reportElement x="150" y="0" width="134" height="20" uuid="54f5b335-1757-4cb4-9779-ac84b6f1546a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Report of the Month of]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="19" width="1" height="17" uuid="98bcd261-772a-4ba5-970f-89b980bdd1d3"/>
+			</line>
+			<textField pattern="MMMMM-YYYY">
+				<reportElement x="284" y="1" width="92" height="19" uuid="6c4610e3-a519-45d0-9733-30b94338eb76"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="4" y="20" width="75" height="17" uuid="0534f49d-7ca9-427a-abff-6d835d6c7b10"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Employee Name]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="36" width="553" height="1" uuid="40966bb7-92dd-41b5-aadd-53c26e50f43c"/>
+			</line>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="462" y="1" width="92" height="19" uuid="eb12332e-c6b0-4ca5-afe2-daf1b80a5516"/>
+				<textElement verticalAlignment="Top">
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="18">
+			<line>
+				<reportElement x="2" y="17" width="553" height="1" uuid="768a835f-dab7-46c1-a315-d82b10c78ab1"/>
+			</line>
+			<line>
+				<reportElement x="1" y="0" width="1" height="18" uuid="a38ed124-2f00-46a6-8a50-9d7193dda325"/>
+			</line>
+			<line>
+				<reportElement x="388" y="0" width="1" height="18" uuid="066394a0-9389-46f5-be93-017d8917f7fa"/>
+			</line>
+			<line>
+				<reportElement x="312" y="0" width="1" height="18" uuid="6ebe752d-3c8d-4899-9183-1e2a67fd37ca"/>
+			</line>
+			<line>
+				<reportElement x="117" y="0" width="1" height="18" uuid="c46c33ed-dbe7-4d6a-abb0-d8d0fa8479b0"/>
+			</line>
+			<line>
+				<reportElement x="508" y="0" width="1" height="18" uuid="eca8f8be-ac0a-475c-bb2b-5fe37357e04d"/>
+			</line>
+			<line>
+				<reportElement x="147" y="0" width="1" height="18" uuid="9c3c69a6-4544-4122-a6a7-81ecc46a6f86"/>
+			</line>
+			<line>
+				<reportElement x="132" y="0" width="1" height="18" uuid="8832467d-fc44-4cc6-810c-553152c24d9a"/>
+			</line>
+			<line>
+				<reportElement x="342" y="0" width="1" height="18" uuid="2801d91c-54c9-45e9-8039-accb30b22a00"/>
+			</line>
+			<line>
+				<reportElement x="418" y="0" width="1" height="18" uuid="51e352c1-32f6-4441-b29d-94abc8b385a5"/>
+			</line>
+			<line>
+				<reportElement x="433" y="0" width="1" height="18" uuid="610dffaf-9633-4f45-aea0-e260a5533431"/>
+			</line>
+			<line>
+				<reportElement x="222" y="0" width="1" height="18" uuid="f9e62a71-dd87-4556-8a8a-177209e9cd14"/>
+			</line>
+			<line>
+				<reportElement x="192" y="0" width="1" height="18" uuid="da245f68-dcf9-4810-813b-37db8fd118ad"/>
+			</line>
+			<line>
+				<reportElement x="252" y="0" width="1" height="18" uuid="ce51bafd-e6e2-4d1a-b089-2d62079c591a"/>
+			</line>
+			<line>
+				<reportElement x="102" y="0" width="1" height="18" uuid="a6a0b970-9add-42b1-b415-1e69c2908fce"/>
+			</line>
+			<line>
+				<reportElement x="237" y="0" width="1" height="18" uuid="a51a71ea-99cc-4c22-aea4-ac17e377e0fe"/>
+			</line>
+			<line>
+				<reportElement x="357" y="0" width="1" height="18" uuid="84007596-0096-4b7a-a86c-983a0ebbbc23"/>
+			</line>
+			<line>
+				<reportElement x="478" y="0" width="1" height="18" uuid="249138d3-40dc-4f97-bacf-e3c2413772a1"/>
+			</line>
+			<line>
+				<reportElement x="523" y="0" width="1" height="18" uuid="3423f4e8-ebdc-4bc3-b546-8d870d29024d"/>
+			</line>
+			<line>
+				<reportElement x="403" y="0" width="1" height="18" uuid="523be1d4-27f4-4610-9435-9a091f9dcecb"/>
+			</line>
+			<line>
+				<reportElement x="282" y="0" width="1" height="18" uuid="7920bde0-929d-42ff-9b5b-7fb741b2ff87"/>
+			</line>
+			<line>
+				<reportElement x="554" y="0" width="1" height="18" uuid="232a6ab6-3aad-4258-9747-22339d3846c3"/>
+			</line>
+			<line>
+				<reportElement x="297" y="0" width="1" height="18" uuid="ec8d0f31-f469-4744-85b3-c5a2a64605a7"/>
+			</line>
+			<line>
+				<reportElement x="207" y="0" width="1" height="18" uuid="1cb05f16-e9a9-4a60-a2dc-fc83c09c708d"/>
+			</line>
+			<line>
+				<reportElement x="463" y="0" width="1" height="18" uuid="318c154d-cca8-4eb2-ae66-c8681221ae45"/>
+			</line>
+			<line>
+				<reportElement x="327" y="0" width="1" height="18" uuid="893aa688-c70d-4f7e-9cdd-6efaf4c84b1e"/>
+			</line>
+			<line>
+				<reportElement x="373" y="0" width="1" height="18" uuid="3086846d-857d-4b92-875e-37b941d27b72"/>
+			</line>
+			<line>
+				<reportElement x="538" y="0" width="1" height="18" uuid="5dff648d-00a4-4b34-b967-ffc736240152"/>
+			</line>
+			<line>
+				<reportElement x="493" y="0" width="1" height="18" uuid="d8c25ec2-020e-4de5-994b-f132903ee628"/>
+			</line>
+			<line>
+				<reportElement x="177" y="0" width="1" height="18" uuid="e2880bd7-baa4-4169-98cd-f972530cafcc"/>
+			</line>
+			<line>
+				<reportElement x="448" y="0" width="1" height="18" uuid="9509ed33-548e-44b3-9ff5-9cb6f465e148"/>
+			</line>
+			<line>
+				<reportElement x="87" y="0" width="1" height="18" uuid="35937d0a-3478-42a4-acdf-f9c548b47a99"/>
+			</line>
+			<line>
+				<reportElement x="267" y="0" width="1" height="18" uuid="753201a1-6e0f-42f3-b5fb-095644e0ea2f"/>
+			</line>
+			<line>
+				<reportElement x="162" y="0" width="1" height="18" uuid="ebe93321-2d05-4301-b0ea-f577e5535b71"/>
+			</line>
+			<textField>
+				<reportElement x="3" y="1" width="29" height="17" uuid="3471bd87-a22c-493b-ad8e-0cab3f025c51"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="22" y="1" width="65" height="17" uuid="781fd259-735c-4379-aab6-9be3cd115268"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement style="style2_1" x="89" y="1" width="13" height="17" uuid="b5703c25-c490-4851-98fd-33e41aced8c0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{1}.equals(null))?  "A" :$F{1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_2" x="104" y="1" width="13" height="17" uuid="d6e730a7-1865-4654-9401-02e3e0c02e50"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{2}.equals(null))? "A":$F{2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_3" x="119" y="1" width="13" height="17" uuid="d62cf067-15be-4f38-aa29-8ae5b6dff8fa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{3}.equals(null))? "A":$F{3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_4" x="134" y="1" width="13" height="17" uuid="f28818a8-9c4c-4997-bc1e-bb68115422bd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{4}.equals(null))? "A":$F{4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_5" x="149" y="1" width="13" height="17" uuid="73f81b65-e7fb-4aa7-b7f1-31ce53d4e807"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{5}.equals(null))? "A":$F{5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_6" x="164" y="1" width="13" height="17" uuid="5145caeb-01a6-4153-b3e7-51701c20ef46"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{6}.equals(null))? "A":$F{6}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_7" x="179" y="1" width="13" height="17" uuid="3c8ebe58-c6cc-4407-ae54-8ef6089f7238"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{7}.equals(null))? "A":$F{7}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_8" x="194" y="1" width="13" height="17" uuid="b7d6e65c-0223-4b12-afea-31a7730400ee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{8}.equals(null))? "A":$F{8}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_9" x="209" y="1" width="13" height="17" uuid="d5c88ded-5066-4558-9537-e14bb14773ab"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{9}.equals(null))? "A":$F{9}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_10" x="224" y="1" width="13" height="17" uuid="c358c954-de21-4e08-9c7b-6d160ed48a2b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{10}.equals(null))? "A":$F{10}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_11" x="239" y="1" width="13" height="17" uuid="eddccd0a-1e05-4ec8-bcb0-cd1624fbd08b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{11}.equals(null))? "A":$F{11}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_12" x="254" y="1" width="13" height="17" uuid="067beb07-a477-4fef-9414-5b0ea09ff052"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{12}.equals(null))? "A":$F{12}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_13" x="269" y="1" width="13" height="17" uuid="e0d6957f-ead4-4687-862c-4e194f6a0974"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{13}.equals(null))? "A":$F{13}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_14" x="284" y="1" width="13" height="17" uuid="ae52c149-c4a9-40b6-b9e8-5c61776315fb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{14}.equals(null))? "A":$F{14}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_15" x="299" y="1" width="13" height="17" uuid="19479783-99c0-47fa-b69a-4c7196cf8b74"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{15}.equals(null))? "A":$F{15}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_16" x="314" y="1" width="13" height="17" uuid="2f6ac2e4-ae0e-4560-a22e-79a37c0f224f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{16}.equals(null))? "A":$F{16}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_17" x="329" y="1" width="13" height="17" uuid="b1321f9f-4895-4834-b9af-59561fc60dd9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{17}.equals(null))? "A":$F{17}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_18" x="344" y="1" width="13" height="17" uuid="f0d6097b-9bf1-48bd-931d-311adc45c137"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{18}.equals(null))? "A":$F{18}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_19" x="359" y="1" width="13" height="17" uuid="ebe2b928-af32-4c8d-8a78-645b795da704"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{19}.equals(null))? "A":$F{19}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_20" x="375" y="1" width="13" height="17" uuid="af8aac0b-60a5-46ac-8f44-6394d34c9dce"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{20}.equals(null))? "A":$F{20}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_21" x="390" y="1" width="13" height="17" uuid="7fe0c3cf-a31f-4ee8-bd14-ea04787dcf9d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{21}.equals(null))? "A":$F{21}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_22" x="405" y="1" width="13" height="17" uuid="c7d3d1d4-ac7f-41c9-8cdd-a96f2060d245"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{22}.equals(null))? "A":$F{22}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_23" x="420" y="1" width="13" height="17" uuid="0839cb01-3b92-43b9-a528-f9b9dcb52c91"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{23}.equals(null))? "A":$F{23}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_24" x="435" y="1" width="13" height="17" uuid="51965398-969b-4ff6-a7b0-503fa2b507fe"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{24}.equals(null))? "A":$F{24}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_25" x="450" y="1" width="13" height="17" uuid="f9c939b8-0c89-4cab-bc5e-5456d1f3b45e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{25}.equals(null))? "A":$F{25}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_26" x="465" y="1" width="13" height="17" uuid="cf98a0cf-9b42-427b-890e-ad3c8c806927"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{26}.equals(null))? "A":$F{26}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_27" x="480" y="1" width="13" height="17" uuid="c1b706c3-72af-4560-bda8-ab88514027f7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{27}.equals(null))? "A":$F{27}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_28" x="495" y="1" width="13" height="17" uuid="7ff00395-0b94-4a9e-8b21-9871731f5b29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{28}.equals(null))? "A":$F{28}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_29" x="510" y="1" width="13" height="17" uuid="6880b194-e3de-4e48-ad03-6da6b5df124a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{29}.equals(null))? "A":$F{29}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2_29_1" x="526" y="1" width="13" height="17" uuid="89f05b80-29fd-43dd-a106-4f5a8e77789d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{30}.equals(null))? "A":$F{30}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style2" x="541" y="1" width="13" height="17" uuid="8eeb7a6d-4ce2-4280-9c59-ce143e88a161"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{31}.equals(null))? "A":$F{31}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="16">
+			<staticText>
+				<reportElement x="0" y="0" width="551" height="16" uuid="aedabe5d-9ba5-486c-943f-7476a29d32dd"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Present= P - Absent=A - Leave=LV - Holiday=HD - Halfday=H - Late=L - Early=E - Overtime=O]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

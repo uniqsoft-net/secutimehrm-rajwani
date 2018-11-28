@@ -1,0 +1,1380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="payslip" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1e2bc0ed-bb8f-4e98-842a-a5a6996ffd28">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="311"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString>
+		<![CDATA[select a.`ID`, a.`Name`, `Department`, `designation`, `bank`, `Shift`, `Date`, `Days`, `PresentDay`, `AbsentDay`, `LateDay`, `EarlyDay`, `late_hour`, `early_hour`, `OverTime`, `InOverTime`, `Salary`, `Medical`, `HouseRent`, `Convence`, `Dearness`, `OT`, `Late`, `Early`, `late_h`, `early_h`, `Tax`, `leave`, `yearly_tax`, `leave_encash`, `loan`, `advance`, `holiday`, `Eobi`, `Sessi`, `Net_Salary`,c.name as 'companyname',c.logo,c.address from report a,companyinfo c]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Department" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="designation" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bank" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Shift" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Days" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PresentDay" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="AbsentDay" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LateDay" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EarlyDay" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="late_hour" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="early_hour" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OverTime" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="InOverTime" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Salary" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Medical" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="HouseRent" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Convence" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Dearness" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OT" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Late" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Early" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="late_h" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="early_h" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tax" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="leave" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="yearly_tax" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="leave_encash" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="loan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="advance" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="holiday" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Eobi" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Sessi" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Net_Salary" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="companyname" class="java.lang.String"/>
+	<field name="logo" class="java.lang.Object">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="Name">
+		<groupExpression><![CDATA[$F{Name}]]></groupExpression>
+	</group>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement style="Column header" x="222" y="89" width="69" height="15" uuid="8d4e2d1b-9b62-4c1c-bb96-5b064ecae268"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Absent Days]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="390" y="72" width="69" height="15" uuid="9fe033c0-3234-4a34-9ebe-c3898f158495"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Late Days]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="390" y="86" width="69" height="15" uuid="d738420f-abc5-457b-b505-071c5fc5b963"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Early Days]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="390" y="58" width="72" height="15" uuid="edb5c8c9-fdd5-4df2-a82c-95a21aac09fb"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Overtime]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="294" y="89" width="67" height="15" uuid="7b22fb2a-e1ec-4c5a-a6d3-d2ca5cd965e5"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{AbsentDay}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="461" y="71" width="86" height="15" uuid="bdfaf7e5-ad7f-4120-8ed6-2f0e1b9470e1"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LateDay}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="465" y="86" width="82" height="15" uuid="a4f21f8d-0dbb-46a0-80d6-f505e1ac943a"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EarlyDay}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="468" y="58" width="79" height="15" uuid="5c3038b0-3271-4606-8f7f-df5cf105a3dd"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OverTime}+$F{InOverTime}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="156" width="555" height="1" forecolor="#999999" uuid="73b6ef00-336a-4138-9bf8-802043e41c43"/>
+			</line>
+			<line>
+				<reportElement x="275" y="134" width="2" height="188" forecolor="#999999" uuid="e3ebdcc9-e512-4496-bd7d-122f3f4a752c"/>
+			</line>
+			<textField>
+				<reportElement style="SubTitle" x="7" y="21" width="538" height="24" uuid="d216f9da-6af5-424b-ad92-5b270a94fb8c"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="SubTitle" x="99" y="102" width="88" height="14" forecolor="#000000" uuid="23c03a6c-11f9-4568-b795-af971c1d8616"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Department}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="99" y="57" width="88" height="15" uuid="9747fb84-7153-4037-a7f9-6fcd1de60305"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ID}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="89" y="87" width="98" height="15" uuid="54ccc239-e613-41e6-9439-b93dbddb6a2f"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bank}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="294" y="73" width="67" height="15" uuid="e6f596cf-c82c-475a-ad68-d59c6e62b0d3"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PresentDay}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy h.mm a" isBlankWhenNull="true">
+				<reportElement style="Column header" x="408" y="0" width="137" height="21" uuid="65a2ccd7-d1a7-41ed-bfb2-8f06c2af756b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="SubTitle" x="99" y="72" width="88" height="15" forecolor="#000000" uuid="6a8436d8-20d8-4bda-81e3-b68505ac54c6"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Title" x="129" y="34" width="151" height="23" uuid="65a8c41e-55f6-4a94-89db-6513b9ffaa79"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Pay Slip For The Period of]]></text>
+			</staticText>
+			<textField pattern="MMMMM-YYYY" isBlankWhenNull="true">
+				<reportElement style="SubTitle" x="280" y="34" width="150" height="23" forecolor="#000000" uuid="82511efe-aa63-49f3-9783-9098c7949cfc"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="2" y="72" width="29" height="15" uuid="7478dfba-ecb0-4335-b5d7-a146e6d9c65e"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="2" y="56" width="29" height="15" uuid="df223b83-849c-45b4-a66d-3b2130fb3e7e"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="2" y="87" width="97" height="15" uuid="eb9cdead-587a-48cd-8487-ca4057b75b91"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Date Of Joining]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="2" y="102" width="69" height="15" uuid="5ca4127e-b848-4d1f-ad3d-a338d07f6ee4"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="222" y="73" width="69" height="15" uuid="7307afcc-aca2-4727-862d-5ecbca4f9b86"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Days Worked]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="2" y="133" width="87" height="23" uuid="4f1a58c4-4f1d-4941-84a2-62fe01986312"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[ Earnings]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="187" y="133" width="77" height="23" uuid="b1d219cb-4c42-49bf-bafe-a930000487df"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="280" y="133" width="81" height="23" uuid="80cc59d0-c792-405f-b773-802c55a60002"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Deductions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="458" y="133" width="87" height="23" uuid="eb9ed09f-96b8-4fa3-8825-672814645723"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="2" y="118" width="69" height="15" uuid="a849f980-85f8-4dce-a63e-f0b2d67b46cd"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Designation]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="SubTitle" x="99" y="118" width="88" height="14" forecolor="#000000" uuid="0e571b07-1471-4d17-bbe6-c8204089e703"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{designation}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="292" y="117" width="69" height="15" uuid="eb005794-9450-46f2-bcc3-c67c0b6c33c8"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{holiday}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="468" y="117" width="79" height="15" uuid="f852895b-eac9-4e0c-8c2d-1507c92a449c"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{early_hour}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="467" y="102" width="80" height="15" uuid="3902bdda-1180-405c-b336-41b94fbd153e"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{late_hour}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="390" y="117" width="69" height="15" uuid="7525b6c4-3ac1-4a80-b19d-67a4cfda059c"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Early Hours]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="294" y="57" width="67" height="15" uuid="745d2029-b2da-45b8-a541-d019136878df"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Days}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="221" y="118" width="72" height="15" uuid="c08858bf-87eb-4fe0-b580-ca38ea97a059"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Holidays]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="390" y="102" width="69" height="15" uuid="08a179f4-d1a4-417c-921a-8f08b30a67be"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Late Hours ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="222" y="103" width="69" height="15" uuid="6d1cb2d3-f47b-4fe1-82eb-5a55dd72ff47"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Leave]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="292" y="103" width="69" height="15" uuid="d7decb78-3b96-46da-a6a0-0f328ac16fc1"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{leave}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="222" y="57" width="69" height="15" uuid="4317b146-798e-4981-92c1-a59adb171551"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Total Days]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="133" width="555" height="1" forecolor="#999999" uuid="9921d649-6137-420a-8587-f350c4f8a3db"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="393" uuid="acc3b19d-9956-40f0-988f-bf8cbcda4f63"/>
+			</line>
+			<line>
+				<reportElement x="1" y="299" width="556" height="1" forecolor="#999999" uuid="d87951dd-ab82-4ef6-98ed-660eb5394d2e"/>
+			</line>
+			<line>
+				<reportElement x="-1" y="323" width="555" height="1" forecolor="#999999" uuid="cfd8a3e1-d46d-48cd-a3db-e25d1569509a"/>
+			</line>
+			<staticText>
+				<reportElement style="Title" x="2" y="300" width="87" height="23" uuid="2bf8aa81-7623-490c-8b5a-4f4a99ebc6ce"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Total Earnings]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="280" y="300" width="110" height="23" uuid="a985a0fd-f3b9-4bf5-9c1d-ffe369543c5d"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Total Deductions]]></text>
+			</staticText>
+			<textField pattern="###0" isBlankWhenNull="true">
+				<reportElement style="Detail" x="98" y="300" width="166" height="22" uuid="693dfc4f-c663-4459-adfb-a5c1c625c9ff"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Salary}+$F{Medical}+$F{HouseRent}+$F{Convence}+$F{Dearness}+(($F{OverTime}+$F{InOverTime})*$F{OT})+(($F{Salary}/$F{Days})*($F{leave_encash}))]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.0" isBlankWhenNull="true">
+				<reportElement style="Detail" x="407" y="300" width="140" height="22" uuid="380b71fd-11f5-4a48-a515-64ee58f4d97b"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[((($F{Salary}+$F{Medical}+$F{HouseRent}+$F{Convence}) / $F{Days})*($F{AbsentDay}+$F{Late}+$F{Early}))+($F{late_hour}*$F{late_h})+($F{early_hour}*$F{early_h})+$F{Tax}+$F{advance}+$F{loan}+$F{yearly_tax}+$F{Eobi}+$F{Sessi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Title" x="280" y="322" width="82" height="21" uuid="fdd5db3f-43a4-49db-9b88-c66e9ffad8b4"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Net Pay]]></text>
+			</staticText>
+			<textField pattern="###0.0" isBlankWhenNull="true">
+				<reportElement style="Detail" x="376" y="323" width="169" height="22" uuid="c13da666-bb4d-4750-a0ec-219ac2ebe572"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Net_Salary}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-1" y="345" width="555" height="1" forecolor="#999999" uuid="fafd11b9-0ab5-478e-a184-2d18bd480414"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="96f6410b-d620-4e6f-9b7d-5a5e2dcb23b8"/>
+			</line>
+			<line>
+				<reportElement x="-2" y="394" width="557" height="1" uuid="4f8d1fc6-02f8-4c0e-a233-a7998bf26733"/>
+			</line>
+			<staticText>
+				<reportElement style="Title" x="2" y="378" width="166" height="17" uuid="40a1cb91-a82e-4e08-b996-1d0bca9effaf"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Account Officer Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="429" y="378" width="119" height="17" uuid="a4cdaa17-ff78-4d96-a224-41404b8d23c6"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Employee Signature]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="378" width="168" height="1" forecolor="#999999" uuid="51327fd4-1d82-4f47-929f-b473cc93b041"/>
+			</line>
+			<line>
+				<reportElement x="385" y="379" width="170" height="1" forecolor="#999999" uuid="c04f0731-dbd0-4d0e-a7cf-82eb44209aa5"/>
+			</line>
+			<line>
+				<reportElement x="555" y="0" width="1" height="393" uuid="b9b30407-4677-495f-83ee-61a4aafcaf8a"/>
+			</line>
+			<frame>
+				<reportElement x="275" y="157" width="277" height="153" isRemoveLineWhenBlank="true" uuid="3fe4ccc9-8e57-4f14-9f60-3615f5f112e7"/>
+				<textField pattern="###0.0" isBlankWhenNull="true">
+					<reportElement style="Detail" x="170" y="90" width="103" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="ce059c1e-c9c2-464c-9ee6-8d5154b7e987"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{advance}.equals(0))? "":$F{advance}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="5" y="15" width="29" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="4ac65404-5564-422d-90c5-c5332682844c"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{Late}.equals(0))? "":"Late"]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0.0" isBlankWhenNull="true">
+					<reportElement style="Detail" x="160" y="14" width="111" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="ff9e64de-ac04-4dbf-a79c-412feeff96d4"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{Late}.equals(0))? "":(($F{Salary}+$F{Medical}+$F{HouseRent}+$F{Convence}) / $F{Days})*$F{Late}]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0.0" isBlankWhenNull="true">
+					<reportElement style="Detail" x="170" y="105" width="103" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="44efb322-1f17-4532-b37a-fd105d1a928b"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{loan}.equals(0))? "":$F{loan}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="5" y="45" width="139" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="4222909a-e683-480a-b5ea-6bc621dd1a04"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{late_hour}*$F{late_h}).equals(0))? "":"Late Hours"]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0.0" isBlankWhenNull="true">
+					<reportElement style="Detail" x="160" y="59" width="112" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="4ea7c15c-055e-4cd7-8daa-980b727f8b03"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{early_hour}*$F{early_h}).equals(0))? "":$F{early_hour}*$F{early_h}]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0.0" isBlankWhenNull="true">
+					<reportElement style="Detail" x="160" y="44" width="112" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="766b27a5-423a-4742-b2e7-5fa09c72de64"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{late_hour}*$F{late_h}).equals(0))? "":$F{late_hour}*$F{late_h}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="5" y="1" width="110" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="f27067b8-9b70-4aa2-81fd-487cfcd827c9"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{AbsentDay}.equals(0))? "":"Absent"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="5" y="29" width="42" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="7ed0f101-db65-4607-a949-3f50fb9c5d4f"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{Early}.equals(0))? "":"Early"]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0.0" isBlankWhenNull="true">
+					<reportElement style="Detail" x="155" y="0" width="115" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="daa2b0ae-b6df-4830-b159-7beb86e75eb9"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{AbsentDay}.equals(0))? "":(($F{Salary}+$F{Medical}+$F{HouseRent}+$F{Convence}) / $F{Days})*$F{AbsentDay}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="5" y="105" width="106" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="420d02c6-7a07-4078-b14b-e431bac36502"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{loan}.equals(0))? "":"Loan"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="5" y="60" width="139" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="98edd590-d891-4146-97e8-c42c3706aa43"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{early_hour}*$F{early_h}).equals(0))? "":"Early Hours"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="5" y="90" width="106" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="01be8108-d68c-48cb-a1e4-cc88be0623a9"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{advance}.equals(0))? "":"Advance"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="5" y="74" width="29" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="397752d2-bd41-4070-8fad-9e4d3d41a36f"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{Tax}.equals(0))? "":"Tax"]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0.0" isBlankWhenNull="true">
+					<reportElement style="Detail" x="160" y="30" width="111" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="d2d8ca2e-f8a4-47c8-8f52-2c31890e899d"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{Early}.equals(0))? "":($F{Salary} / $F{Days})*$F{Early}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Detail" x="160" y="75" width="112" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="6a1f27ef-670c-4f00-88b2-6771d9c27642"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{Tax}.equals(0))? "":$F{Tax}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="5" y="119" width="106" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="02c09646-f964-4140-964b-81c93c4c8638"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{Sessi}.equals(0))? "":($F{Sessi}.equals(null))? "":"Sessi"]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0.0" isBlankWhenNull="true">
+					<reportElement style="Detail" x="170" y="133" width="103" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="5a66b4de-6218-4935-a30f-f50038a49203"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{Eobi}.equals(0))? "":$F{Eobi}]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0.0" isBlankWhenNull="true">
+					<reportElement style="Detail" x="170" y="119" width="103" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="12463f22-7cfb-4f04-8d9f-64129f67ef0b"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{Sessi}.equals(0))? "":$F{Sessi}]]></textFieldExpression>
+				</textField>
+				<textField pattern="" isBlankWhenNull="true">
+					<reportElement style="Column header" x="5" y="134" width="106" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="9094a56a-4c1d-4b11-a7fc-9ccbece25344"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{Eobi}.equals(0))? "":($F{Eobi}.equals(null))? "":"EOBI"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="2" y="157" width="265" height="135" isRemoveLineWhenBlank="true" uuid="01a36797-d9ff-40b0-83cf-583b1d3a0b76"/>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Detail" x="162" y="75" width="96" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="a56e2381-09a7-4fcd-898b-0841aa0bef2f"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[((($F{OverTime}+$F{InOverTime})*$F{OT}).equals(0))? "":($F{OverTime}+$F{InOverTime})*$F{OT}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Detail" x="172" y="29" width="86" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="faf18dc8-7e63-4330-8f25-d9235639cee8"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{HouseRent}).equals(0))? "":$F{HouseRent}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Detail" x="172" y="59" width="86" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="47f863ac-45b3-49b4-a17c-e850b58a8d83"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{Dearness}).equals(0))? "":$F{Dearness}]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0" isBlankWhenNull="true">
+					<reportElement style="Detail" x="152" y="1" width="106" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="3f1742f1-14c9-4d09-a535-9a61fe4acfe8"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{Salary}).equals(0))? "":$F{Salary}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Detail" x="172" y="44" width="86" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="7b05e5b4-dc1e-4428-b608-40ea37ed48cf"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{Convence}).equals(0))? "":$F{Convence}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Detail" x="172" y="14" width="86" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="2510b6d2-8d81-4b31-9de8-9aa70eeabb75"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{Medical}).equals(0))? "":$F{Medical}]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0" isBlankWhenNull="true">
+					<reportElement style="Detail" x="170" y="90" width="87" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="6b926f6f-45f5-4498-9e18-a0d584ab30a0"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{leave_encash}.equals(0))? "":($F{Salary}/$F{Days})*$F{leave_encash}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="0" y="44" width="121" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="a577e5b2-b529-4dc9-86c0-bb32b5b8b194"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{Convence}).equals(0))? "":" Convence Allowance"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="0" y="1" width="66" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="c402dadd-aa1e-4534-b2bb-7e3ca234632b"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{Salary}).equals(0))? "":" Basic Salary"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="2" y="91" width="108" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="e1600997-c06e-412e-9382-8590172abdc1"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{leave_encash}.equals(0))? "":"Leave Encashment"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="0" y="15" width="125" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="f24ef7bd-be15-4370-a86a-477ed4ccc9eb"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{Medical}).equals(0))? "":" Medical Allowance"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="0" y="29" width="121" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="efd80c2b-4c73-4df4-892a-6327d14e10bf"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{HouseRent}).equals(0))? "":" House Rent Allowance"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="0" y="59" width="117" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="9837013b-8b3a-46c5-8e1e-51798bdcd5ed"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{Dearness}).equals(0))? "":" Dearness Allowance"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="0" y="75" width="71" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="638c21c7-1b46-4e28-af7f-7b60e3ed411b"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[((($F{OverTime}+$F{InOverTime})*$F{OT}).equals(0))? "":" Over Time"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement style="Column header" x="2" y="503" width="69" height="15" uuid="400bcdff-e27b-4992-9051-a1a0ebe284bd"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="390" y="520" width="69" height="15" uuid="de3eb5fb-4942-4d6c-913a-59dc3394ff3a"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Early Hours]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="2" y="539" width="87" height="23" uuid="f2c755f9-39de-41f1-baf6-745d72b7fdaf"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[ Earnings]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="478" y="489" width="67" height="15" uuid="71a5d06e-c201-4983-9609-fe4bcc245ef1"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EarlyDay}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="390" y="504" width="69" height="15" uuid="1600e74e-3971-4455-8166-060e8d1d82db"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Late Hours ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="2" y="488" width="97" height="15" uuid="6440a034-2420-4cdc-ae0e-2ff0ac38a0a2"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Date Of Joining]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="466" y="521" width="79" height="15" uuid="374163c0-e2e9-4689-aad7-44127f79816b"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{early_hour}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="SubTitle" x="99" y="503" width="88" height="14" forecolor="#000000" uuid="2d5a1a90-4ded-4ae2-a8c7-f82a39862696"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Department}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="SubTitle" x="99" y="473" width="88" height="15" forecolor="#000000" uuid="bc92d153-9aa5-43fa-8eac-3723d4c301f4"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy h.mm a" isBlankWhenNull="true">
+				<reportElement style="Column header" x="408" y="401" width="137" height="21" uuid="75b3aabc-6cb9-4db9-8ae9-e038446d6ce2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Title" x="458" y="539" width="87" height="23" uuid="73c56de0-69ca-421f-9d39-8d1d7deeedfe"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="222" y="521" width="72" height="15" uuid="ecb5b8ae-fc4e-4452-b0bb-f0062e3fa509"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Holidays]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="SubTitle" x="7" y="422" width="487" height="23" uuid="85070026-9318-4301-84ec-14d521204789"/>
+				<textElement textAlignment="Center" markup="none">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Title" x="280" y="539" width="81" height="23" uuid="9859cd4e-07db-479b-9f72-5eaf19fd7c26"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Deductions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="223" y="460" width="69" height="15" uuid="e297af61-c53c-4cf4-af9b-e5f016aaf338"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Total Days]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="222" y="505" width="69" height="15" uuid="8f31e061-69e8-4ba8-987c-1d310f524af7"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Leave]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="401" width="1" height="401" uuid="4fff79e3-932d-4a57-a36c-cb1d04df4d8a"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="294" y="490" width="67" height="15" uuid="80294db2-47b4-4ee8-b185-eea76ebd2145"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{AbsentDay}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="294" y="475" width="67" height="15" uuid="1c6f753a-f0f9-43fd-9a01-1b853f87f0a8"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PresentDay}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="2" y="519" width="69" height="15" uuid="15378850-9d1f-4a9f-b533-a9a8fd6d7933"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Designation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="390" y="472" width="69" height="15" uuid="676117ae-4d42-4ade-83b8-921d7550746a"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Late Days]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="129" y="435" width="151" height="23" uuid="a8840522-fa86-4a30-b415-a30c1362380a"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Pay Slip For The Period of]]></text>
+			</staticText>
+			<line>
+				<reportElement x="275" y="540" width="2" height="188" forecolor="#999999" uuid="852c7256-19f6-4c02-b873-e671ad590ae6"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="478" y="473" width="67" height="15" uuid="81dd16c1-cfde-4df6-98b5-b5f28886ac23"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LateDay}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="222" y="475" width="69" height="15" uuid="d69719e2-761d-4c6d-ba0a-f3949867cdb4"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Days Worked]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="99" y="458" width="88" height="15" uuid="91f92599-1c08-4362-a393-0a8c69f2a43f"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ID}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="295" y="521" width="66" height="15" uuid="9df7dfc6-b56c-4cb5-97b9-5853f380b47b"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{holiday}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="222" y="490" width="69" height="15" uuid="6743991a-4cfd-4e49-ad39-41a5f8c955de"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Absent Days]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="390" y="458" width="72" height="15" uuid="20f34523-dffa-4ac3-8262-89e1e8f0c4eb"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Overtime]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="539" width="555" height="1" forecolor="#999999" uuid="7a2c9c80-cc3d-490b-af61-6b912ffe03e1"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement style="SubTitle" x="99" y="519" width="88" height="14" forecolor="#000000" uuid="0f019842-0113-41ed-990e-f6ccb8c570ae"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{designation}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM-YYYY" isBlankWhenNull="true">
+				<reportElement style="SubTitle" x="280" y="435" width="150" height="23" forecolor="#000000" uuid="f621d4b1-c3f3-4aa3-b329-4f4cafbd8243"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="478" y="458" width="67" height="15" uuid="24fdaa0f-a3a9-4be3-8361-d715e8a6b17b"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OverTime}+$F{InOverTime}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="89" y="488" width="98" height="15" uuid="1d05efe0-b01d-42f1-be9b-872efa78edc9"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bank}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="467" y="475" width="79" height="0" uuid="8ebff1aa-9904-479b-9be3-38c89376a094"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Days}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="390" y="488" width="69" height="15" uuid="e77e5236-2120-4d86-b823-c60128a0f043"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Early Days]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="467" y="490" width="79" height="0" uuid="f5eb9eb9-c04d-4d5f-bcad-11172de1f6a2"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{leave}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="2" y="457" width="29" height="15" uuid="ce015365-3c87-41a9-a3bf-472a346cc99d"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="467" y="505" width="79" height="0" uuid="e8776539-65c6-4d16-886e-647baafb9b48"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{late_hour}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Title" x="187" y="539" width="77" height="23" uuid="f54624d3-6c3e-4fb6-895b-9c01790e2567"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<line>
+				<reportElement x="556" y="401" width="1" height="400" uuid="8d1d039b-4ef1-4dd1-9405-afa93c3a354c"/>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="2" y="473" width="29" height="15" uuid="c133fde4-aa8f-447e-96a6-ff044c9eceee"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="801" width="555" height="1" uuid="66d20dff-aeb9-41a9-9eeb-3b4d5a330e58"/>
+			</line>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement style="Column header" x="89" y="657" width="105" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="f13f47c8-e21c-4444-8613-60c3a53f73e5"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="10"/>
+				</textElement>
+			</textField>
+			<frame>
+				<reportElement x="277" y="562" width="277" height="153" isRemoveLineWhenBlank="true" uuid="8b9b6783-ffae-4c68-8ec7-8101d9f76b23"/>
+				<textField pattern="###0.0" isBlankWhenNull="true">
+					<reportElement style="Detail" x="170" y="88" width="103" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="6da8292d-5dc6-4c9d-88f3-1a64f87163da"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{advance}.equals(0))? "":$F{advance}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="5" y="13" width="29" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="af2d76db-e493-41c1-a69d-f686c8ef1dc7"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{Late}.equals(0))? "":"Late"]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0.0" isBlankWhenNull="true">
+					<reportElement style="Detail" x="160" y="13" width="111" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="405467e6-bc21-485c-a8e7-431b85f743c3"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{Late}.equals(0))? "":(($F{Salary}+$F{Medical}+$F{HouseRent}+$F{Convence}) / $F{Days})*$F{Late}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Detail" x="170" y="103" width="103" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="ce8163d7-2b90-4742-99eb-4ac714739dd6"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{loan}.equals(0))? "":$F{loan}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="5" y="43" width="139" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="4f83028d-30dd-4665-b88b-70bbdd50209f"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{late_hour}*$F{late_h}).equals(0))? "":"Late Hours"]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0.0" isBlankWhenNull="true">
+					<reportElement style="Detail" x="160" y="58" width="112" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="08ddac2c-711f-475d-93f1-fe674d9a489f"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{early_hour}*$F{early_h}).equals(0))? "":$F{early_hour}*$F{early_h}]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0.0" isBlankWhenNull="true">
+					<reportElement style="Detail" x="160" y="43" width="112" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="64136f9b-a04d-4d57-8b3a-7609c2c1e26c"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{late_hour}*$F{late_h}).equals(0))? "":$F{late_hour}*$F{late_h}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="5" y="1" width="110" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="ed8a3f31-e4a5-45e0-bc21-acf6e2002c76"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{AbsentDay}.equals(0))? "":"Absent"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="5" y="30" width="42" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="d70e70bf-62dc-4a80-9104-f651bb8457c9"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{Early}.equals(0))? "":"Early"]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0.0" isBlankWhenNull="true">
+					<reportElement style="Detail" x="155" y="0" width="115" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="37a4bd97-690b-4e25-b320-b3a2d3b75c3d"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{AbsentDay}.equals(0))? "":(($F{Salary}+$F{Medical}+$F{HouseRent}+$F{Convence}) / $F{Days})*$F{AbsentDay}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="5" y="103" width="106" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="9c72ccbc-f480-420d-baca-7ef96c253773"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{loan}.equals(0))? "":"Loan"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="5" y="58" width="139" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="2a3fc549-8806-4efa-a4a7-3a3270bd653e"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{early_hour}*$F{early_h}).equals(0))? "":"Early Hours"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="5" y="90" width="106" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="7c808b68-1d97-47ee-9569-db4216b3809e"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{advance}.equals(0))? "":"Advance"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="5" y="73" width="29" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="9c2a71e2-a43d-4f68-aebc-9fb20fbf33b5"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{Tax}.equals(0))? "":"Tax"]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0.0" isBlankWhenNull="true">
+					<reportElement style="Detail" x="160" y="28" width="111" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="d2b9e264-d2e3-4dad-ae57-df404e240d2c"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{Early}.equals(0))? "":($F{Salary} / $F{Days})*$F{Early}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Detail" x="160" y="73" width="112" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="05d6a55b-b7a6-40cb-918d-49ad22bc71ba"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{Tax}.equals(0))? "":$F{Tax}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="5" y="120" width="106" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="abb54f8c-292b-4404-845e-b72f4db726d8"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{Sessi}.equals(0))? "":($F{Sessi}.equals(null))? "":"Sessi"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Detail" x="170" y="133" width="103" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="cde0929b-648e-4dc6-8203-5a1f8fc608c5"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{Eobi}.equals(0))? "":$F{Eobi}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Detail" x="170" y="118" width="103" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="b165cd1e-0161-4cc7-a5fc-da94c7d3a5d2"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{Sessi}.equals(0))? "":$F{Sessi}]]></textFieldExpression>
+				</textField>
+				<textField pattern="" isBlankWhenNull="true">
+					<reportElement style="Column header" x="5" y="133" width="106" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="bc6a6858-0634-44c7-adea-076979e9fc7e"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{Eobi}.equals(0))? "":($F{Eobi}.equals(null))? "":"EOBI"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="7" y="562" width="265" height="135" isRemoveLineWhenBlank="true" uuid="c62395d7-6f9c-46ac-99f6-7edf2d638ebb"/>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Detail" x="162" y="73" width="96" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="12766f4c-d2e9-4ee6-b6ca-6d6aaa7f7e25"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[((($F{OverTime}+$F{InOverTime})*$F{OT}).equals(0))? "":($F{OverTime}+$F{InOverTime})*$F{OT}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Detail" x="172" y="28" width="86" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="d4370fc4-a699-4998-b99a-7105a0262a78"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{HouseRent}).equals(0))? "":$F{HouseRent}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Detail" x="172" y="60" width="86" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="fc73222d-ae0f-46dc-b25c-35f95399f24f"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{Dearness}).equals(0))? "":$F{Dearness}]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0" isBlankWhenNull="true">
+					<reportElement style="Detail" x="152" y="1" width="106" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="07878cb9-294a-42cd-8acc-71e432752e3b"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{Salary}).equals(0))? "":$F{Salary}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Detail" x="172" y="43" width="86" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="1cbd6bcb-ffac-421e-a779-c401eaef68d0"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{Convence}).equals(0))? "":$F{Convence}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Detail" x="172" y="13" width="86" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="e53ee88d-9ad9-4a76-b3a7-e561ee340b00"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{Medical}).equals(0))? "":$F{Medical}]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0" isBlankWhenNull="true">
+					<reportElement style="Detail" x="170" y="88" width="87" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="7d586875-398b-415c-a3d0-428191bf2a49"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{leave_encash}.equals(0))? "":($F{Salary}/$F{Days})*$F{leave_encash}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="0" y="43" width="121" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="adea6cf4-4e81-4f17-9ca8-5725af31a1e6"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{Convence}).equals(0))? "":" Convence Allowance"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="0" y="1" width="66" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="fb6c150f-fd9a-4daf-bd68-83622bc42b99"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{Salary}).equals(0))? "":" Basic Salary"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="2" y="88" width="108" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="8f1e98a6-e680-4cb3-8fe3-66675ddaf782"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{leave_encash}.equals(0))? "":"Leave Encashment"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="0" y="13" width="125" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="e16b0ee2-985f-4678-ab70-174134fd443b"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{Medical}).equals(0))? "":" Medical Allowance"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="0" y="30" width="121" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="1be07c05-a083-4b12-8281-2d80f98e6d43"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{HouseRent}).equals(0))? "":" House Rent Allowance"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="0" y="58" width="117" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="2d945b26-c26d-4bb5-95df-2bde67503ef3"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{Dearness}).equals(0))? "":" Dearness Allowance"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="0" y="73" width="71" height="15" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="12748ddf-6a0b-4824-9da2-ce0babe4c215"/>
+					<textElement verticalAlignment="Bottom" markup="none">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[((($F{OverTime}+$F{InOverTime})*$F{OT}).equals(0))? "":" Over Time"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement x="2" y="703" width="555" height="1" forecolor="#999999" uuid="b98950da-f75a-4fbd-92ab-4255fbcfcef1"/>
+			</line>
+			<textField pattern="###0" isBlankWhenNull="true">
+				<reportElement style="Detail" x="100" y="704" width="166" height="22" uuid="87be5851-dd32-4251-8e63-9d054055321d"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Salary}+$F{Medical}+$F{HouseRent}+$F{Convence}+$F{Dearness}+(($F{OverTime}+$F{InOverTime})*$F{OT})+(($F{Salary}/$F{Days})*($F{leave_encash}))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Title" x="4" y="704" width="87" height="23" uuid="fc5ed0dc-a926-4874-8eca-bccd641dd00e"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Total Earnings]]></text>
+			</staticText>
+			<textField pattern="###0.0" isBlankWhenNull="true">
+				<reportElement style="Detail" x="409" y="704" width="140" height="22" uuid="226b793a-4787-42f0-b6a3-2e5f3c87ca58"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[((($F{Salary}+$F{Medical}+$F{HouseRent}+$F{Convence}) / $F{Days})*($F{AbsentDay}+$F{Late}+$F{Early}))+($F{late_hour}*$F{late_h})+($F{early_hour}*$F{early_h})+$F{Tax}+$F{advance}+$F{loan}+$F{yearly_tax}+$F{Eobi}+$F{Sessi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Title" x="282" y="704" width="110" height="23" uuid="74308b32-ba82-46fc-aed7-e33e3d2115a7"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Total Deductions]]></text>
+			</staticText>
+			<textField pattern="###0.0" isBlankWhenNull="true">
+				<reportElement style="Detail" x="376" y="730" width="169" height="22" uuid="e8bf7ea0-e6d5-412b-9dd9-cec94cdea9e5"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Net_Salary}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Title" x="280" y="729" width="82" height="21" uuid="387db893-c7b5-419c-80b2-370774dca87e"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Net Pay]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="293" y="460" width="68" height="15" uuid="1f13c2f9-bfdc-4545-8508-a05478b94c8e"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Days}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="291" y="504" width="70" height="15" uuid="2a36a446-dcf9-4555-824d-8ba9d92107cf"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{leave}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="465" y="505" width="80" height="15" uuid="dbf46513-1e7c-4e93-8ede-a0ac920483b0"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{late_hour}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="728" width="555" height="1" forecolor="#999999" uuid="fa65dbfd-a2c3-44e3-a3fb-a90fba472923"/>
+			</line>
+			<line>
+				<reportElement x="1" y="752" width="555" height="1" forecolor="#999999" uuid="d4e2cf57-a53d-4f03-9ce4-65f8ed2056dc"/>
+			</line>
+			<line>
+				<reportElement x="0" y="401" width="557" height="1" uuid="ebcdf71c-aefc-46bf-abde-af62cc39c563"/>
+			</line>
+			<staticText>
+				<reportElement style="Title" x="3" y="785" width="166" height="17" uuid="87a43e9a-e40d-4ee9-82aa-a56a959127a9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Account Officer Signature]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="785" width="168" height="1" forecolor="#999999" uuid="6ad990f5-3287-47e6-993e-97e2e930e0db"/>
+			</line>
+			<line>
+				<reportElement x="386" y="786" width="170" height="1" forecolor="#999999" uuid="88115819-0c09-46c4-a75c-51edba20adf7"/>
+			</line>
+			<staticText>
+				<reportElement style="Title" x="430" y="785" width="119" height="17" uuid="7ff59561-74f1-4e9e-b14d-15cf8ae0e81f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Employee Signature]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="562" width="555" height="1" forecolor="#999999" uuid="e440e979-3f9b-4fe6-97ba-133150df7c30"/>
+			</line>
+			<textField evaluationTime="Report">
+				<reportElement x="7" y="-1" width="487" height="22" uuid="b1cfd46c-1b65-488a-869a-40825ab7728f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="18" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyname}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="14" y="402" width="453" height="22" uuid="3ec4dca1-072a-489e-897e-66ae3b95745e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="18" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyname}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

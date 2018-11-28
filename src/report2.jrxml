@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="9bde7d8f-0156-4429-b033-fd4eb0afff56">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM `report`]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Department" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Shift" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Days" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PresentDay" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="AbsentDay" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LateDay" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EarlyDay" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OverTime" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="InOverTime" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Net_Salary" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="Name">
+		<groupExpression><![CDATA[$F{Name}]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<rectangle>
+					<reportElement mode="Opaque" x="0" y="0" width="36" height="24" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="129de794-eae3-499e-851f-9d752cd389cd"/>
+				</rectangle>
+				<textField>
+					<reportElement style="SubTitle" x="36" y="1" width="199" height="24" forecolor="#000000" uuid="3ff2e18c-422e-484e-9a18-56dab04117da"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+				</textField>
+				<frame>
+					<reportElement x="91" y="25" width="727" height="15" uuid="3cf0d189-8dc3-4ee5-aefe-5ed6a6e6e68c"/>
+				</frame>
+				<textField>
+					<reportElement style="Detail" x="0" y="25" width="58" height="15" uuid="cf4c4a01-43ac-4a79-9626-ba46b8337549"/>
+					<textFieldExpression><![CDATA[$F{ID}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="78" y="24" width="58" height="15" uuid="0a5a1a4e-edf3-4a3d-baa7-9f07bde5ac34"/>
+					<textFieldExpression><![CDATA[$F{Shift}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="167" y="24" width="58" height="15" uuid="7d52019b-c808-44da-9da8-b63bb8a79bee"/>
+					<textFieldExpression><![CDATA[$F{Days}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="252" y="24" width="69" height="15" uuid="1366637f-4177-4a0b-9468-669359c67473"/>
+					<textFieldExpression><![CDATA[$F{PresentDay}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="331" y="24" width="58" height="15" uuid="350f2e95-0edc-4aae-bfbc-f227123bf99d"/>
+					<textFieldExpression><![CDATA[$F{AbsentDay}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="406" y="24" width="58" height="15" uuid="3ba83e9c-4b77-4dd7-84a1-563f5e297a47"/>
+					<textFieldExpression><![CDATA[$F{LateDay}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="464" y="25" width="58" height="15" uuid="3337537d-b8c2-4f1d-b749-40250e17e436"/>
+					<textFieldExpression><![CDATA[$F{EarlyDay}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="528" y="24" width="58" height="15" uuid="7acd80ec-5cec-47dc-a66c-b59c7b02b1bf"/>
+					<textFieldExpression><![CDATA[$F{OverTime}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="586" y="24" width="58" height="15" uuid="e0852da4-41cb-4753-a8fd-c5d9127a897e"/>
+					<textFieldExpression><![CDATA[$F{InOverTime}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="671" y="24" width="90" height="15" uuid="42c00feb-e87e-457a-8b04-ba084b700379"/>
+					<textFieldExpression><![CDATA[$F{Net_Salary}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="30"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band height="572" splitType="Stretch">
+			<elementGroup/>
+		</band>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="11" width="321" height="56" uuid="03b88dad-fdf8-4448-a140-96c5e7abb429"/>
+				<textElement verticalAlignment="Middle">
+					<font size="42" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Payroll Report of ]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement style="Column header" x="68" y="84" width="99" height="20" forecolor="#000000" uuid="0d8bd4fc-2d53-474b-85b5-32ac6070fa6e"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Date}.toString()]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="1159" y="47" width="100" height="20" uuid="376775e5-1efa-4bb5-88e8-83749dbe9cd5"/>
+			</frame>
+			<textField pattern="ABCD">
+				<reportElement style="Column header" x="331" y="11" width="411" height="56" forecolor="#000000" uuid="b76ef40c-6985-492c-8a0f-e7c9b1f48048"/>
+				<textElement>
+					<font size="42" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Department}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="84" width="48" height="20" uuid="acac7413-3c86-4e2e-b8e2-94954ff9df26"/>
+				<textElement markup="none">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Month"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="6" width="802" height="20" backcolor="#666666" uuid="d134d84d-d994-461f-879d-bf011614c702"/>
+				<staticText>
+					<reportElement style="Column header" x="0" y="0" width="58" height="15" uuid="9864cf93-dc7e-49eb-9dd3-fe190916798d"/>
+					<text><![CDATA[ID]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="78" y="0" width="58" height="15" uuid="8eb38d57-7870-449c-a715-1eea8c710038"/>
+					<text><![CDATA[Shift]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="167" y="0" width="58" height="15" uuid="abcd03c3-b3b6-4729-8bf4-79ba5b2f204d"/>
+					<text><![CDATA[Days]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="252" y="0" width="69" height="15" uuid="080e9c05-5164-4f38-b8af-d43eeff37f41"/>
+					<text><![CDATA[PresentDay]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="331" y="0" width="68" height="15" uuid="a6c6e2a6-549d-49bb-85cc-31ed03e595be"/>
+					<text><![CDATA[AbsentDay]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="406" y="0" width="58" height="15" uuid="eac3a0c1-b267-4ce7-80f6-6c942074e30a"/>
+					<text><![CDATA[LateDay]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="464" y="0" width="58" height="15" uuid="e4c62cb1-ea9c-455b-a4f3-693a6926e8e0"/>
+					<text><![CDATA[EarlyDay]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="522" y="0" width="58" height="15" uuid="3857f13f-ce15-4792-9d6b-c5107f0ce000"/>
+					<text><![CDATA[OverTime]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="586" y="0" width="85" height="15" uuid="b206bdf4-d86b-4eef-9572-5df0f54d7f98"/>
+					<text><![CDATA[InOverTime]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="671" y="0" width="71" height="15" uuid="ceb39f10-5577-4f55-ac4a-5f4a344a0325"/>
+					<text><![CDATA[Net Salary]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="761" y="0" width="35" height="15" uuid="5c5ea452-fa65-45f3-86c2-bc0f9fa04e87"/>
+					<text><![CDATA[Sign]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="97" y="16" width="705" height="1" uuid="ca247f51-a093-4101-a15c-7fa932737ee6"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="78" y="19" width="267" height="20" uuid="1d39e739-98d7-4838-b90e-97c70a826ce2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Payroll Report]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="439" y="19" width="80" height="20" uuid="2c3d2fc0-7665-49fc-8c4f-e993b36e45ef"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="519" y="19" width="21" height="20" uuid="db361ef2-d020-41b6-9ff4-fed2c5705907"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
